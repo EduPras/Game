@@ -1,3 +1,6 @@
+#ifndef ITEM
+#define ITEM
+
 #include <string>
 
 using namespace std;
@@ -25,3 +28,4 @@ public:
   string describe();
   string getClass();
 };
+#endif

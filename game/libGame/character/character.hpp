@@ -1,8 +1,10 @@
+#ifndef CHARACTER
+#define CHARACTER
+
 #include <iostream>
 #include <string>
 #include <vector>
-#include <sstream>
-#include "item.hpp"
+#include "../item/item.hpp"
 
 using namespace std;
 class Character {
@@ -17,3 +19,5 @@ class Character {
     void pick(Item* i);
     void list_items();
 };
+
+#endif
