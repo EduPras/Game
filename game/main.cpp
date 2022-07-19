@@ -1,6 +1,6 @@
 #include <iostream>
-#include "item.hpp"
-#include "character.hpp"
+#include "libGame/item/item.hpp"
+#include "libGame/character/character.hpp"
 
 using namespace std;
 
