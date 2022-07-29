@@ -1,18 +1,20 @@
 cmake_minimum_required(VERSION 3.18)
 project(libgame CXX)
 add_library(libgame)
+add_subdirectory(item)
 target_sources(
   libgame
   PUBLIC 
         character/character.hpp
-        item/weapon/weapon.hpp
-        item/weapon/rod/rod.hpp
-        item/weapon/sword/sword.hpp
   PRIVATE 
         character/character.cpp        
-        item/weapon/sword/sword.cpp
-        item/weapon/rod/rod.cpp
 )
+target_link_libraries(
+  libgame
+  PRIVATE
+    item
+)
+include_directories(${root_SOURCE_DIR})
 
 target_include_directories(
   libgame
