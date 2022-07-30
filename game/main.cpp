@@ -6,6 +6,8 @@
 
 using namespace std;
 
+int Item::no_items = 0;
+
 int main(){
   vector<Item*> items;
   items.push_back(new Sword(10, 0.9, "Ice"));
@@ -14,5 +16,6 @@ int main(){
   c << (items[0]);
   c << (items[1]);
   c.list_items();
+  cout << Item::getNumberOfItems() << " items\n";
   return 0;
 }
