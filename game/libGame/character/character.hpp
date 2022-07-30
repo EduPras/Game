@@ -16,7 +16,7 @@ class Character {
   public:
     Character (string n);
     // virtual void attack();
-    void pick(Item* i);
+    void operator <<(Item* i);
     void list_items();
 };
 

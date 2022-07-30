@@ -15,7 +15,7 @@ Character::Character (string n){
     cout << "Personagem " << this->name << " criado" << endl;
 };
 // virtual void attack();
-void Character::pick(Item* i){
+void Character::operator <<(Item* i){
     items.push_back(i);
 }
 
