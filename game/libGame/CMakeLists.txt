@@ -6,8 +6,12 @@ target_sources(
   libgame
   PUBLIC 
         character/character.hpp
+        character/warrior/warrior.hpp
+        character/wizard/wizard.hpp
   PRIVATE 
         character/character.cpp        
+        character/warrior/warrior.cpp
+        character/wizard/wizard.cpp
 )
 target_link_libraries(
   libgame
