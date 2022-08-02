@@ -16,7 +16,8 @@ public:
   };
   virtual string getClass() {
     return "Weapon";
-  }
+  };
+  int getDamage() { return this->damage_; }
 };
 
 #endif
