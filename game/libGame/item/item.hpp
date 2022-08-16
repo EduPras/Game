@@ -20,12 +20,8 @@ public:
   string getName() {
     return this->name_;
   };
-  virtual string getClass() {
-    return "Just a regular item...";
-  };
-  virtual string describe() {
-    return "What is this?";
-  }
+  virtual string getClass() = 0;
+  virtual string describe() = 0;
   static int getNumberOfItems(){ return no_items; }
 };
 
