@@ -25,7 +25,7 @@ void Character::list_items(){
 
 void Character::attack(Character &opponent, Weapon* weapon) {
   float new_life = opponent.getLife() - (
-      (opponent.getDefense()) - 
+      (opponent.getDefense()) + 
       (weapon->getDamage()*this->strength_*0.2)
       );
   cout << this->name_ << " attacked " << opponent.getName()
