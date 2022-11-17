@@ -1,14 +1,14 @@
-#ifndef WIZARD
-#define WIZARD
+#ifndef ENEMY
+#define ENEMY
 
 #include <string>
 #include "../character.hpp"
 
-class Wizard: public Character {
+class Enemy: public Character {
 private:
   float magic;
 public:
-  Wizard(string s): Character(s, "Wizard") {};
+  Enemy(string s): Character(s, "Enemy") {};
   void magic_attack(Character& opponent);
 };
 #endif
