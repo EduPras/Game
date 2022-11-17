@@ -2,7 +2,7 @@
 #define CHARACTERS
 
 #include "./character.hpp"
-#include "./warrior/warrior.hpp"
-#include "./wizard/wizard.hpp"
+#include "./hero/hero.hpp"
+#include "./enemy/enemy.hpp"
 
 #endif
