@@ -41,6 +41,7 @@ public:
   virtual string getClass() = 0;
   virtual string describe() = 0;
   static int getNumberOfItems(){ return all_items_.size(); };
+  static vector<Item*> getItems(){ return all_items_; }
 };
 
 
