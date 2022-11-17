@@ -4,6 +4,7 @@ add_library(libgame)
 
 # subfolders
 add_subdirectory(item)
+add_subdirectory(stage)
 add_subdirectory(character)
 
 target_link_libraries(
@@ -11,6 +12,7 @@ target_link_libraries(
   PRIVATE
     character
     item
+    stage
 )
 include_directories(${root_SOURCE_DIR})
 

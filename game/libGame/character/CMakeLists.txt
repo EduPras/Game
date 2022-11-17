@@ -7,12 +7,12 @@ target_sources(
   PUBLIC 
     character.hpp
     characters.hpp
-    warrior/warrior.hpp
-    wizard/wizard.hpp
+    hero/hero.hpp
+    enemy/enemy.hpp
   PRIVATE
     character.cpp
-    warrior/warrior.cpp
-    wizard/wizard.cpp
+    hero/hero.cpp
+    enemy/enemy.cpp
 )
 
 target_include_directories(
