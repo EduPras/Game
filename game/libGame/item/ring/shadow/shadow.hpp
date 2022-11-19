@@ -7,7 +7,7 @@ class Shadow: public Ring {
   private:
     int spell_;
   public:
-    Shadow(string ss, int g, int s): 
+    Shadow(int g, int s, string ss): 
       spell_(s), Ring(g, ss){};
     virtual string getClass(){
       return "Ring Shadow";

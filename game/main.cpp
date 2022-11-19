@@ -1,6 +1,8 @@
 #include "libGame/item/items.hpp"
+#include "libGame/item/item.hpp"
 #include "libGame/character/characters.hpp"
 #include "libGame/stage/stage.hpp"
+#include "libGame/game/game.hpp"
 
 #include <iostream>
 #include <vector>
@@ -10,13 +12,25 @@ using namespace std;
 vector<Item*> Item::all_items_ = {};
 
 int main(){
-  try{
+  vector<Item*> items = {
+    new Sword(10, 0.9, "Ice"),
+    new Sword(108, 0.8, "Leaf"),
+    new Rod(10, 0.9, "Fireblood"),
+    new Shadow(10, 7, "Ring of power"),
+    new Rod(10, 0.7, "Colossus"),
+    new Rock(10, 97, "Ring of defense")
+  };
+  Game g("Eduardo");
+  Stage* stg;
+  cout << g.get_hero()->getName() << endl;
+  stg = g.get_stage();
+  stg->list_drops();
+}
+/*
+ *  try{
     //cout  << stg.get_drop()->getName() << endl;
     vector<Item*> items;
-    items.push_back(new Sword(10, 0.9, "Ice"));
-    items.push_back(new Sword(10, 0.8, "Ice 2"));
-    items.push_back(new Rod(10, 0.7, "Colossus"));
-    items.push_back(new Rod(10, 0.7, "Colossus 2"));
+
     Stage *stg =  new Stage();
     cout <<  "Stg: " << stg->get_drop()->getName() << endl;
     Character c = Hero("Garrosh");
@@ -28,4 +42,4 @@ int main(){
     cout << msg;
   }
   return 0;
-}
+  */

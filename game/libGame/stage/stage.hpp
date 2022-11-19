@@ -8,11 +8,12 @@
 class Stage {
   private:
     int level_;
-    array<Item*, 3> drops;
+    array<Item*, 3> drops_;
     Enemy enemy_;
   public:
     Stage();
     Item* get_drop();
+    void list_drops();
     void update_level();
 }; 
 

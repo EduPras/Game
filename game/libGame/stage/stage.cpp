@@ -4,7 +4,7 @@
 Stage::Stage(){
   this->level_ = 0; 
   this->enemy_ = Enemy(this->level_);
-  update_level();
+  this->update_level();
 }
 
 void Stage::update_level(){
@@ -14,13 +14,20 @@ void Stage::update_level(){
   // Atualizar drops
   srand(time(0));
   vector<Item*> items = Item::getItems();
-  cout << rand() % 3 << " Size: " << items.size() << endl;
-  this->drops[0] = items[rand() % 3];
-  this->drops[1] = items[rand() % 3];
-  this->drops[2] = items[rand() % 3];
+  if(items.size() > 3){
+    this->drops_[0] = items[rand() % 3];
+    this->drops_[1] = items[rand() % 3];
+    this->drops_[2] = items[rand() % 3];   
+  }
 }
 
 Item* Stage::get_drop(){
   srand(time(0));
-  return this->drops[rand() % 3];
+  return this->drops_[rand() % 3];
+}
+
+void Stage::list_drops(){
+  cout << "Drops (lvl " << this->level_ << "): " << endl;
+  for(int i = 0; i < 3; i++)
+    cout << "\t["<< i+1 <<"]: " << drops_[i]->getName()<< endl;
 }

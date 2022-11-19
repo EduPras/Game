@@ -1,14 +1,14 @@
 cmake_minimum_required(VERSION 3.18)
-project(game CXX)
-add_executable(game)
+project(app CXX)
+add_executable(app)
 add_subdirectory(libGame)
 target_sources(
-    game
+    app
     PRIVATE
         main.cpp
 )
 target_link_libraries(
-  game
+  app
   PRIVATE
     libgame
 )
