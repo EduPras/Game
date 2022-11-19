@@ -16,16 +16,9 @@ class Character {
     vector<Item*> items_;
     string class_;
   public:
-    Character (string n, string c): 
-      name_(n),
-      life_(900),
-      strength_(10),
-      defense_(10),
-      items_({}),
-      class_(c)
-    {};
+    Character (string n, string c);
     ~Character (){
-      cout << "Deleting character...\n";
+      cout << "Deleting character :"<< this->name_ <<"...\n";
     }
     void attack(Character& opponent, Weapon* weapon);
     void show_status();

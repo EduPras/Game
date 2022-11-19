@@ -9,9 +9,10 @@
 
 using namespace std;
 
+
 vector<Item*> Item::all_items_ = {};
 
-int main(){
+vector<Item*> create_items(){
   vector<Item*> items = {
     new Sword(10, 0.9, "Ice"),
     new Sword(108, 0.8, "Leaf"),
@@ -20,11 +21,23 @@ int main(){
     new Rod(10, 0.7, "Colossus"),
     new Rock(10, 97, "Ring of defense")
   };
+  system("clear");
+  return items;
+}
+
+void close_game(vector<Item*> *items){
+  cout << "Closing game..." << endl;
+  for(auto it = items->begin(); it != items->end(); it++)
+    delete *it;
+}
+
+int main(){
+  vector<Item*> items = create_items();
   Game g("Eduardo");
-  Stage* stg;
-  cout << g.get_hero()->getName() << endl;
-  stg = g.get_stage();
-  stg->list_drops();
+  //g.get_stage()->update_level();
+  close_game(&items);
+
+
 }
 /*
  *  try{

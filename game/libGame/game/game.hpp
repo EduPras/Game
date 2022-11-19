@@ -10,15 +10,13 @@ class Game {
     Hero hero_;
     int turn_;
     Character *attacker_;
-    vector<Item*> items_;
   public:
     Game(string n): 
       hero_(n), turn_(0), stage_() {};
     Character* get_hero(){ return &hero_; };
     Stage* get_stage(){ return &stage_; };
     int get_turn(){ return this->turn_; };
-
-
+    ~Game(){ delete attacker_; }
 };
 
 #endif

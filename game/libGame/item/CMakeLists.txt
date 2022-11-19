@@ -11,6 +11,8 @@ target_sources(
   PUBLIC 
     item.hpp
     items.hpp
+  PRIVATE
+    item.cpp
 )
 
 

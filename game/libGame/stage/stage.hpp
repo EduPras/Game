@@ -9,12 +9,14 @@ class Stage {
   private:
     int level_;
     array<Item*, 3> drops_;
-    Enemy enemy_;
+    Enemy *enemy_;
   public:
-    Stage();
+    Stage(): enemy_(new Enemy()), level_(0) {};
+    ~Stage();
     Item* get_drop();
     void list_drops();
     void update_level();
+    Enemy* get_enemy(){ return this->enemy_; };
 }; 
 
 #endif

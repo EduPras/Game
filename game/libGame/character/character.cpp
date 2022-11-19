@@ -7,6 +7,17 @@
 using namespace std;
 
 // virtual void attack();
+Character::Character(string n, string c): 
+      name_(n),
+      life_(900),
+      strength_(10),
+      defense_(10),
+      items_({}),
+      class_(c)
+      {
+        cout << "New "<<this->class_<<" ["<<this->name_<<"]" << endl;
+      };
+
 void Character::operator <<(Item* i){
     items_.push_back(i);
 }
