@@ -5,8 +5,6 @@
 #include "../character.hpp"
 
 class Hero: public Character {
-private:
-  float critic;
 public:
   Hero(string s): Character(s, "Hero") {};
 };
