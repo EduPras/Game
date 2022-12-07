@@ -37,14 +37,15 @@ vector<Item*> create_items(){
 
 
 int main(){
+    
 
     using namespace ftxui;
     Game *g;
     int entrou = 0;
-    int hp = 100;
-    int hptot = 100;
-    int hpe = 10;
-    int dano = 1;
+    int hp = g->get_hero()->getLife();
+    int hptot = g->get_hero()->getLife();
+    int hpe = g->get_stage()->get_enemy()->getLife();
+    int dano = g->get_hero()->getStrength();
     int vivo = 1;
     std::string nome = "";
     std::string vida = std::to_string(hp) + "/" + std::to_string(hptot);
@@ -130,7 +131,7 @@ auto telaMata = Renderer(aceitar, [&] {
     
     auto cenario = Canvas(500, 100);  
     cenario.DrawBlockCircleFilled(55, 50, 35, Color::Blue);
-    cenario.DrawBlockCircleFilled(305, 50, 35, Color::Red);
+    cenario.DrawBlockCircleFilled(75, 50, 35, Color::Blue);
     Component ataque = Button("Ataque", [&] {hpe-=dano;}, ButtonOption::Animated(Color::Red));
     Component quit = Button("Sair", [&]  {vivo = 0; screen1.ExitLoopClosure()(); }, ButtonOption::Animated(Color::Red));
     Component test = Button("test", [&]  {hp-=10; vida = std::to_string(hp) + "/" + std::to_string(hptot);}, ButtonOption::Animated(Color::Red));
@@ -153,7 +154,7 @@ auto telaMata = Renderer(aceitar, [&] {
                 }),
                 filler(),
                 hbox({
-                    vbox({text(nome)| center, hbox({text(vida)})|center, gauge(hp * 0.01f)| border})|flex,
+                    vbox({text(g->get_hero()->getName())| center, hbox({text(vida)})|center, gauge(hp * 0.01f)| border})|flex,
                     ataque->Render(),
                     filler(),
                     test->Render(),
@@ -164,7 +165,7 @@ auto telaMata = Renderer(aceitar, [&] {
                     filler(),
                     }),
                     quit->Render(),
-                    vbox({text("Inimigo"), gauge(hpe * 0.1)| border})|flex
+                    vbox({text("Inimigo sijjojo"), gauge(hpe * 0.1)| border})|flex
                 })
             }) | border;
 
