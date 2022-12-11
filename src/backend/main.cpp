@@ -38,4 +38,3 @@ int main(){
   //close_game(&items);
   int c = getchar();
 }
-*/

@@ -14,7 +14,8 @@ class Game {
       hero_(n), stage_(0) {};
     Hero* get_hero(){ return &hero_; };
     Stage* get_stage(){ return &stage_; };
-    //int get_turn(){ return this->turn_; };
+    int get_turn(){ return this->turn_; };
+    void hit_enemy();
     ~Game(){}
 };
 

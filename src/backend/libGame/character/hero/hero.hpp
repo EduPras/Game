@@ -5,8 +5,10 @@
 #include "../character.hpp"
 
 class Hero: public Character {
+
 private:
   int bençao;
+
 public:
   Hero(string s): Character("Hero"), bençao(50) {};
   //void healing(Hero* h){}

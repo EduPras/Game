@@ -15,6 +15,7 @@
 #include "ftxui/component/screen_interactive.hpp"  // for ScreenInteractive
 
 int main(){
+     /*
     //tentar novamente nao funciona
     //armas no stage (explicar)
     //status das weapons //rings!!!
@@ -25,6 +26,16 @@ int main(){
     Sword* weapon_monster = new Sword(3, 5, "Basic Sword");
     int hptot = (int)g->get_hero()->getLife();
     int hpetot = (int)g->get_stage()->get_enemy()->getLife();
+    */
+    
+
+    using namespace ftxui;
+    Game *g;
+    int entrou = 0;
+    int hp = g->get_hero()->getLife();
+    int hptot = g->get_hero()->getLife();
+    int hpe = g->get_stage()->get_enemy()->getLife();
+    int dano = g->get_hero()->getStrength();
     int vivo = 1;
     bool sair = 0;
     int entrou = 0;

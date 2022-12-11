@@ -16,7 +16,7 @@ class Character {
     int strength_, defense_;
     Weapon* main_weapon;
     Ring* ring_;
-
+    
   public:
     Character (string n);
     ~Character (){
@@ -26,12 +26,13 @@ class Character {
     
     //void operator <<(Item* i);
     //void list_items();
-
+    
     // getters
     string getName() { return this->name_; }
     Weapon* getWeapon(){ return this->main_weapon;}
     Ring* getRing(){return this->ring_;}
     float getLife() { return this->life_; }
+
     int getStrength() { return this->strength_; }
     int getDefense() { return this->defense_; }
 
