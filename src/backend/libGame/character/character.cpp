@@ -6,11 +6,34 @@
 
 using namespace std;
 
-// virtual void attack();
-Character::Character(string n, string c): 
+Character::Character(string n): 
       name_(n),
-      life_(900),
+      life_(100),
       strength_(10),
+      defense_(10) {}
+
+/*
+void Character::operator <<(Item* i){
+    items_.push_back(i);
+} */
+/*
+void Character::list_items(){
+    vector<Item*>::iterator it;
+    cout << "ITEMS: " << endl;
+    for(auto n_item: items_){
+    stringstream ss;
+    ss << "\t NAME ("+n_item->getClass()+"): "+ n_item->getName() + "\n";
+    ss << "\t Description: " + n_item->describe() << endl;
+    cout << ss.str() << endl;
+    }
+    
+}*/
+
+void Character::attack(Character* opponent, Weapon* weapon) {
+  float new_life = opponent->getLife() - (
+      (weapon->getDamage()*this->strength_*0.2) * ((1 - (opponent->getDefense())/100))
+      );
+  opponent->setLife(new_life);
       defense_(10),
       weapon_(new Sword(8, 3, "Regular Sword")),
       class_(c)
