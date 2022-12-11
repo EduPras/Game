@@ -6,8 +6,9 @@
 
 class Hero: public Character {
 private:
-  float critic;
+  int bençao;
 public:
-  Hero(string s): Character(s, "Hero") {};
+  Hero(string s): Character("Hero"), bençao(50) {};
+  //void healing(Hero* h){}
 };
 #endif

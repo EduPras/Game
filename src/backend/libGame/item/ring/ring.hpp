@@ -7,10 +7,11 @@ using namespace std;
 
 class Ring: public Item {
   protected:
-    int glow_;
+    int life_;
+    int def_;
   public:
-    Ring(int g, string s):
-      glow_(g), Item(s) {};
+    Ring(int l, int d, string s):
+      life_(l), def_(d), Item(s) {};
     virtual string getClass() {
       return "Ring";
     }

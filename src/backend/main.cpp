@@ -10,7 +10,7 @@
 using namespace std;
 
 
-vector<Item*> Item::all_items_ = {};
+/*vector<Item*> Item::all_items_ = {};
 
 vector<Item*> create_items(){
   vector<Item*> items = {
@@ -38,4 +38,4 @@ int main(){
   //close_game(&items);
   int c = getchar();
 }
-
+*/

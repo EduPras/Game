@@ -4,5 +4,6 @@
         "string": "cpp",
         "vector": "cpp",
         "sstream": "cpp"
-    }
+    },
+    "cmake.configureOnOpen": false
 }
