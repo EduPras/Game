@@ -1,5 +1,5 @@
 #include "./item.hpp"
-/*
+
 Item::Item(string s): name_(s) {
     vector<Item*>::iterator it;
     stringstream ss;
@@ -18,4 +18,4 @@ Item::Item(string s): name_(s) {
       cout << "Creating Item...\n";
       all_items_.push_back(this);
     }
-};*/
+};

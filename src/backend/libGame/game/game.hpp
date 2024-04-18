@@ -8,11 +8,11 @@ class Game {
   private:
     Stage stage_;
     Hero hero_;
-    //int turn_;
+    int turn_;
   public:
     Game(string n): 
-      hero_(n), stage_(0) {};
-    Hero* get_hero(){ return &hero_; };
+      hero_(n), turn_(0), stage_(0) {};
+    Character* get_hero(){ return &hero_; };
     Stage* get_stage(){ return &stage_; };
     int get_turn(){ return this->turn_; };
     void hit_enemy();
